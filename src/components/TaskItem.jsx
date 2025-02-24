@@ -1,10 +1,10 @@
 import React from 'react'
 
-const TaskItem = ({description, isCompleted}) => {
+const TaskItem = ({task}) => {
   return (
     <div>
-        {description}<br></br>
-        {isCompleted? "completada": "Não completada"}
+        <p>{task.description}</p>
+        <p>Status: {task.isCompleted ? "Concluído" : "Pendente"}</p>
     </div>
   )
 }
