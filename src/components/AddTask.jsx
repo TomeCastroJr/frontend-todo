@@ -8,7 +8,7 @@ import "./AddTask.scss";
 import CustomInput from "./CustomInput";
 import CustomButton from "./CustomButton";
 
-const AddTask = () => {
+const AddTask = ({getTasks}) => {
     const [task, setTask] = useState("");
 
     const mudanca = (e) => {
@@ -21,15 +21,15 @@ const AddTask = () => {
         if(task.length == 0){
           throw new Error("Preencher o campo de mensagem")
         }
-        
+
         const data = {
           description: task,
           isCompleted: false
         }
       
         const response = await axios.post(`http://localhost:8000/tasks`, data);
-        
-
+        setTask("");
+        await getTasks();
         toast.success('Tarefa cadastrada com sucesso!', {
           position: 'bottom-right',
         }) 
