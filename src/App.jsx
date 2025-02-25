@@ -1,10 +1,12 @@
-import Tasks from "./components/Tasks"
+import Tasks from "./components/Tasks";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
   return (
     <>
       <Tasks/>
+      <ToastContainer/>
     </>
   )
 }
