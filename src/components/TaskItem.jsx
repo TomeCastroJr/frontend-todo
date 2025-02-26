@@ -43,7 +43,11 @@ const TaskItem = ({ task, getTasks}) => {
       <div className='task-description'>
         <label className={task.isCompleted? "checkbox-container-completed" : "checkbox-container"}>
           {task.description}
-          <input type="checkbox" defaultChecked={task.isCompleted} onChange={e => handleTaskCompletedChange(e)}/>
+          <input 
+          type="checkbox" 
+          defaultChecked={task.isCompleted} 
+          onChange={e => handleTaskCompletedChange(e)}
+          />
           <span className={task.isCompleted? "checkmark completed" : "checkmark"}></span>
         </label>
       </div>
