@@ -46,7 +46,7 @@ const AddTask = ({getTasks}) => {
           <FaPlus size={14} color="#ffffff" onClick={handleTaskAddition}/>
         </CustomButton>
     </div>
-  )
+  ) 
 }
 
 export default AddTask
